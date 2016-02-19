@@ -1,0 +1,28 @@
+{
+  "name": "react-slide-pannel",
+  "version": "0.0.1",
+  "description": "generic sliding pannel useful for example for off canvas side menu with burger, and fries.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ticaboo/react-slide-pannel.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "ui",
+    "side",
+    "slide",
+    "pannel",
+    "animation"
+  ],
+  "author": "Henry Kemp <henry@loveabite.com> (www.lovebite.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ticaboo/react-slide-pannel/issues"
+  },
+  "homepage": "https://github.com/ticaboo/react-slide-pannel#readme"
+}
