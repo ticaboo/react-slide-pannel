@@ -1,11 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SidePanelToggle from './SidePanelToggle';
 
 
 var SidePanel = React.createClass({
+
+	getInitialState: function() {
+		return {
+			SidePanel: {
+				'align': "left",	
+				'isOpen' : ""
+			}					
+		};
+	},
+
+	togglePanel: function() {
+		var panel = this.state.SidePanel;
+
+		panel.isOpen = !panel.isOpen
+
+		this.setState({
+			SidePanel: panel
+		});	
+	},
+
 	render: function() {
 
-		var panel = this.props.SidePanel;
+		var panel = this.state.SidePanel;
 		var alignment = "align-" + panel.align;
 		var animation;
 
@@ -22,11 +43,15 @@ var SidePanel = React.createClass({
 		var SidePanelClasses = "slide-panel " + alignment + " " + animation;
 
 		return (
-			<div id="side-panel" className={SidePanelClasses}>
-				<h1>Hello SidePanel!</h1>
+			<div>
+				<div id="side-panel" className={SidePanelClasses}>
+					{this.props.children}
+				</div>
+				<SidePanelToggle togglePanel={this.togglePanel} SidePanel={this.state.SidePanel} />
 			</div>
 		);
 	}
+	
 });
 
 export default SidePanel;
