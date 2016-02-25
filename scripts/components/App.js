@@ -21,11 +21,7 @@ var App = React.createClass({
 	togglePanel: function() {
 		var panel = this.state.SidePanel;
 
-		if (panel.isOpen) {
-			panel.isOpen = false;			
-		} else{
-			panel.isOpen = true;
-		}
+		panel.isOpen = !panel.isOpen
 
 		this.setState({
 			SidePanel: panel

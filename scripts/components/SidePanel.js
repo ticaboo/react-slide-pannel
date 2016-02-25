@@ -11,9 +11,9 @@ var SidePanel = React.createClass({
 
 		if (panel.isOpen !== "") {
 			if (panel.isOpen) {
-				animation = "on-canvas slideIn-" + panel.align
+				animation = "slideIn-" + panel.align
 			} else{
-				animation = "off-canvas slideOut-" + panel.align
+				animation = "slideOut-" + panel.align
 			}			
 		} else {
 			animation = "idle"
